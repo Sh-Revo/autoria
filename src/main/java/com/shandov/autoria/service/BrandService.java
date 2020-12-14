@@ -29,7 +29,7 @@ public class BrandService {
         for(Category category: categories) {
             List<Brand> list = webClient
                     .get()
-                    .uri("/categories/"+category.getValue()+"/marks?api_key=etxQ1jDBtEC6yeUsZ4WKNaFReHNf6cvsrLSHX28d")
+                    .uri("categories/"+category.getValue()+"/marks?api_key=etxQ1jDBtEC6yeUsZ4WKNaFReHNf6cvsrLSHX28d")
                     .retrieve()
                     .bodyToFlux(Brand.class)
                     .collectList()
